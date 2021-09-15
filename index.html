@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>CRUD Page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+
+
+
+
+    <div class="container my-5 py-5 shadow rounded W-50">
+        <h1 class="text-white">CRUD System</h1>
+        <label class="text-white">ProductName:</label>
+        <input type="text" class="form-control " id="ProductName" />
+        <div class="alert myAlert d-none" role="alert">
+            <strong class="text-white">please start with capital letter...</strong>
+        </div>
+
+
+        <label class="text-white">ProductCategory:</label>
+        <input type="text" class="form-control" id="ProductCategory" />
+
+        <label class="text-white">ProductPrice:</label>
+        <input type="text" class="form-control" id="ProductPrice" />
+
+        <label class="text-white">ProductDescription:</label>
+        <textarea type="text" class="form-control" id="ProductDescription"></textarea>
+        <div class="alert myAlert my-5 d-none" role="alert" id="lastAlert">
+            <strong class="text-white">please enter all fields...</strong>
+        </div>
+        <button id="addBtn" class="btn btn-outline-info my-5 " onclick="addProduct();">Add product</button>
+        <button id="updateBtn" class="btn btn-outline-info my-5  " onclick="updateProduct();">update product</button>
+        <button id="clearBtn" class="btn btn-outline-info my-5  " onclick="clearForm()">clear</button>
+    </div>
+
+
+    <input type="text" class="form-control w-25 m-auto my-5" placeholder="search..." onkeyup="search(this.value)">
+    <table class=" w-75 mx-auto my-5 table-striped text-center">
+        <thead class="text-white">
+            <th>Index</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>description</th>
+            <th>delete</th>
+            <th>update</th>
+        </thead>
+        <tbody id="tbody" class="text-white">
+
+
+        </tbody>
+    </table>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/mine.js"></script>
+    <!-- <script src="js/second.js"></script> -->
+</body>
+
+</html>
